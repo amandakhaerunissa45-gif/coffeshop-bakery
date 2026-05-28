@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffe Shop — Sweet Moments Start Here</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=IM+Fell+English:ital@0;1&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <a href="#home" class="nav-brand">Coffe Shop</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#services" class="btn btn-nav">Shop Now</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#home"     onclick="closeMobile()">Home</a>
+  <a href="#services" onclick="closeMobile()">Menu</a>
+  <a href="#about"    onclick="closeMobile()">About</a>
+  <a href="#contact"  onclick="closeMobile()">Contact</a>
+</nav>
+
+<!-- ═══ HERO / HOME ═══ -->
+<section id="home">
+  <div class="hero-content reveal">
+    <span class="hero-badge">Open 24/7 · Bakery &amp; Café</span>
+    <h1 class="hero-title">Sweet Moments<br/>Start Here</h1>
+    <p class="hero-sub">Every cake is thoughtfully crafted with love and passion, combining rich flavors and soft textures to create sweet moments you'll always remember.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-primary">Shop Now</a>
+      <a href="#about" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+  <img
+    src="morveur.jpeg"
+    alt="Delicious coffee and pastries"
+    class="hero-img"
+  />
+  <div class="hero-scroll">
+    <span>↓</span>
+    scroll
+  </div>
+</section>
+
+<!-- ═══ SERVICES / MENU ═══ -->
+<section id="services">
+  <div class="section-header reveal">
+    <span class="section-tag">Our Menu</span>
+    <h2 class="section-title">Hold a Cake</h2>
+    <p class="section-sub">Spack out each dessert profiting — indulge in our finest selections.</p>
+  </div>
+  <div class="products-grid">
+
+    <div class="product-card reveal">
+      <span class="sale-badge">SALE</span>
+      <div class="product-img-wrap">
+        <img src="latte art.png" alt="Latte Art Coffee" />
+      </div>
+      <div class="product-info">
+        <p class="product-name">Latte Art Coffee</p>
+        <p class="product-price">Rp 30,000 <span>/ cup</span></p>
+        <button class="btn btn-sm" onclick="addToCart('Latte Art Coffee')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <span class="sale-badge">SALE</span>
+      <div class="product-img-wrap">
+        <img src="caramel latte.png" alt="Caramel Latte" />
+      </div>
+      <div class="product-info">
+        <p class="product-name">Caramel Latte</p>
+        <p class="product-price">Rp 20,000 <span>/ cup</span></p>
+        <button class="btn btn-sm" onclick="addToCart('Caramel Latte')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <span class="sale-badge">SALE</span>
+      <div class="product-img-wrap">
+        <img src="sweet chocolate cake.png" alt="Sweet Chocolate Cake" />
+      </div>
+      <div class="product-info">
+        <p class="product-name">Sweet Chocolate Cake</p>
+        <p class="product-price">Rp 45,000 <span>/ slice</span></p>
+        <button class="btn btn-sm" onclick="addToCart('Sweet Chocolate Cake')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <span class="sale-badge">SALE</span>
+      <div class="product-img-wrap">
+        <img src="croissant chocolate.png" alt="Croissant Chocolate" />
+      </div>
+      <div class="product-info">
+        <p class="product-name">Croissant Chocolate</p>
+        <p class="product-price">Rp 19,000 <span>/ pcs</span></p>
+        <button class="btn btn-sm" onclick="addToCart('Croissant Chocolate')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="matcha tiramisu.jpeg" alt="Matcha Tiramisu" />
+      </div>
+      <div class="product-info">
+        <p class="product-name">Matcha Tiramisu</p>
+        <p class="product-price">Rp 38,000 <span>/ portion</span></p>
+        <button class="btn btn-sm" onclick="addToCart('Matcha Tiramisu')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="ice latte.png" alt="ice latte" />
+      </div>
+      <div class="product-info">
+        <p class="product-name">ice latte</p>
+        <p class="product-price">Rp 22,000 <span>/ pcs</span></p>
+        <button class="btn btn-sm" onclick="addToCart('ice latte')">Buy Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="about-img-wrap reveal">
+    <img src="pasteur.jpeg" alt="The Ultimate Cafe Experience" />
+  </div>
+  <div class="about-text reveal">
+    <span class="section-tag">About Us</span>
+    <h2 class="section-title">The Ultimate Cafe Experience</h2>
+    <p class="section-sub">Experience a world where premium coffee meets exquisite desserts. Crafted for those with a refined palate, every visit is an occasion worth savoring.</p>
+    <p class="section-sub" style="margin-top:14px;">We source only the finest beans and freshest ingredients, baked daily with unwavering dedication to quality and taste.</p>
+    <div class="about-stats">
+      <div class="stat">
+        <div class="stat-num">12+</div>
+        <div class="stat-label">Years Brewing</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Menu Items</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">10k+</div>
+        <div class="stat-label">Happy Guests</div>
+      </div>
+    </div>
+    <br/>
+    <a href="#contact" class="btn btn-primary" style="margin-top:8px;">Find Us</a>
+  </div>
+</section>
+
+<!-- ═══ PROMO BANNER ═══ -->
+<div class="promo-banner reveal">
+  <div class="promo-text">
+    <p class="promo-eyebrow">Special Sale</p>
+    <h2 class="promo-title">Buy 2 Coffee,<br/>Get 1 Cake Free!</h2>
+    <p class="promo-desc">Limited time offer — visit us today and claim your free slice.</p>
+  </div>
+  <a href="#contact" class="btn-promo">Claim Sale</a>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="section-header reveal">
+    <span class="section-tag">Get In Touch</span>
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-sub">We'd love to hear from you. Visit us, call, or drop a message below.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-detail">
+          <p class="label">Location</p>
+          <a href="https://maps.google.com/?q=Coffe+Street+No+12" target="_blank" rel="noopener">
+            Coffe Street No.12
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-detail">
+          <p class="label">Phone</p>
+          <a href="tel:+6281234567890">0812-3456-7890</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-detail">
+          <p class="label">Email</p>
+          <a href="mailto:coffeeshop@gmail.com">coffeeshop@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-detail">
+          <p class="label">Hours</p>
+          <p>Open 24 / 7 — Every Day</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reveal">
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <input type="text"  placeholder="Your Name"  required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <input type="text" placeholder="Subject" />
+        <textarea placeholder="Your message..."></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-brand">Coffe Shop</div>
+  <p class="footer-tagline">Sweet Moments Start Here</p>
+  <div class="divider"></div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#services">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+6281234567890">0812-3456-7890</a>
+    <a href="mailto:coffeeshop@gmail.com">coffeeshop@gmail.com</a>
+  </div>
+  <p class="footer-copy">© 2025 Coffe Shop. All rights reserved.</p>
+</footer>
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
